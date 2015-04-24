@@ -20,7 +20,7 @@ public class BarCodePane extends JOptionPane{
 
 	private static final long serialVersionUID = -2553429599369927823L;
 	public static final String title = "OPSI Hostname ";
-	public static final String Version = "0.3";
+	public static final String Version = "0.4";
 	protected static String mycode;
 	public static String domain = "ub.hsu-hh.de";
 
@@ -79,6 +79,7 @@ public class BarCodePane extends JOptionPane{
 			barcodename=hostname;
 			
 		mycode="{'dns':'"+barcodename+"."+domain+"'}";
+		mycode="{\"dns\":\""+barcodename+"."+domain+"\"}";
 	
 		final BufferedImage img = generate(mycode);
 
